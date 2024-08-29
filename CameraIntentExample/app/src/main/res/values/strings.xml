@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CameraIntentExample</string>
+    <string name="name">Name</string>
+    <string name="submit">Submit</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="take_a_picture">Take a picture</string>
+</resources>
