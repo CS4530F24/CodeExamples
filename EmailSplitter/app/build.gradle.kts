@@ -44,5 +44,4 @@ dependencies {
     implementation("androidx.test:runner:1.6.2")
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
-    androidTestImplementation("androidx.test.ex    androidTestImplementation(\"androidx.test.espresso:espresso-core:3.6.1\")\nt:junit:1.2.1")
 }
