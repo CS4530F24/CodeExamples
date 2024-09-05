@@ -10,9 +10,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 class MainActivity : AppCompatActivity() {
 
 
-
+    // Only compute on first access, lazy init
     val binding: ActivityMainBinding by lazy {ActivityMainBinding.inflate(layoutInflater)}
 
+    // the recyclerview
     val recycler by lazy{ binding.recycler }
 
 
@@ -25,6 +26,9 @@ class MainActivity : AppCompatActivity() {
         //"DELEGATED PROPERTY".  Access to myViewModel calls viewModels.getValue which manages lifecycle stuff
         val myViewModel : TodoViewModel by viewModels()
 
+        // Use with so you don't have to repeatedly
+        // say recycler.something everytime you use its
+        // properties
         with(recycler){
             layoutManager = LinearLayoutManager(this@MainActivity) //NEW KOTLIN THING
             adapter = TodoListAdapter(listOf()){
