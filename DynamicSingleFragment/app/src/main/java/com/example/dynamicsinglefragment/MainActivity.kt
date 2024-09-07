@@ -42,7 +42,8 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
-            // Older approach to making fragment
+            // Older approach to making fragment appear!
+            // still works
 //            val frag = DynamicFragment()
 //            val fTrans = supportFragmentManager.beginTransaction()
 //            fTrans.replace(R.id.dynamic_fragment,frag)
