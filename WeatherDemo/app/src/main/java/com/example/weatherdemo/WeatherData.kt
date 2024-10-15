@@ -20,7 +20,6 @@ class Converters {
     }
 }
 
-
 //Defines a SQLITE table, basically
 @Entity(tableName="weather")
 data class WeatherData(var timestamp: Date,

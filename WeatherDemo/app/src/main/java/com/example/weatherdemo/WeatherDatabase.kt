@@ -63,6 +63,4 @@ interface WeatherDAO {
 
     @Query("SELECT * from weather ORDER BY timestamp DESC")
     fun allWeather() : Flow<List<WeatherData>>
-
-
 }

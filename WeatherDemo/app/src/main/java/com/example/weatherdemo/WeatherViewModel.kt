@@ -9,7 +9,6 @@ import androidx.lifecycle.ViewModelProvider
 class WeatherViewModel(private val repository: WeatherRepository) : ViewModel() {
 
     val currentWeather: LiveData<WeatherData> = repository.currentWeather
-
     val allWeather: LiveData<List<WeatherData>> = repository.allWeather
 
     fun checkWeather(city: String){

@@ -17,6 +17,8 @@ class WeatherApplication : Application() {
         WeatherDatabase::class.java,
         "weather_database"
     ).build()}
+
+
     //create our repository using lazy to access the DB when we need it
     val weatherRepository by lazy {WeatherRepository(scope, db.weatherDao())}
 }
