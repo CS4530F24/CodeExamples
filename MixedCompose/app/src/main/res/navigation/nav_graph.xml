@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/composableFragment1">
+
+    <fragment
+        android:id="@+id/composableFragment1"
+        android:name="com.example.mixedcompose.ComposableFragment1"
+        android:label="fragment_composable1"
+        tools:layout="@layout/fragment_composable1" >
+        <action
+            android:id="@+id/action_composableFragment1_to_fragment2"
+            app:destination="@id/fragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="com.example.mixedcompose.Fragment2"
+        android:label="fragment_2"
+        tools:layout="@layout/fragment_2" />
+</navigation>
