@@ -1,0 +1,35 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.jetbrains.kotlin.android'
+
+android {
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.learnopengles.android"
+        minSdkVersion 23
+        targetSdkVersion 34
+    }
+
+    signingConfigs {
+        release {
+            def STUB = "stub"
+            //these variables should be defined in ~/.gradle/gradle.properties file
+            storeFile file(project.hasProperty("RELEASE_STORE_FILE") ? RELEASE_STORE_FILE : STUB);
+            storePassword project.hasProperty("RELEASE_STORE_PASSWORD") ? RELEASE_STORE_PASSWORD : STUB;
+            keyAlias project.hasProperty("RELEASE_KEY_ALIAS") ? RELEASE_KEY_ALIAS : STUB;
+            keyPassword project.hasProperty("RELEASE_KEY_PASSWORD") ? RELEASE_KEY_PASSWORD : STUB;
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            signingConfig signingConfigs.release
+        }
+    }
+    namespace 'com.learnopengles.android'
+    compileOptions {
+        sourceCompatibility 17
+        targetCompatibility 17
+    }
+}
